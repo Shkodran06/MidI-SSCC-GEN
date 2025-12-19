@@ -183,6 +183,7 @@ let qrObj=null;
 let qty=1;
 
 /* ===== MEMORIA PERSISTENTE ===== */
+localStorage.removeItem('ssccMemory'); // RESET ad ogni apertura
 const memory=JSON.parse(localStorage.getItem('ssccMemory')||'{}');
 saveMemory();
 
