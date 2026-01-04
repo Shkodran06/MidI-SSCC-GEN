@@ -211,7 +211,7 @@ function generateQR(v){
 /* ===== HISTORY ===== */
 function renderHistory(){
   historyBox.innerHTML='';
-  Object.keys(memory).slice(-6).reverse().forEach(k=>{
+Object.keys(memory).slice(-6).forEach(k=>{
     const d=document.createElement('div');
     d.textContent=`${k} (${memory[k].count}) - ${memory[k].lastPrinted}`;
     d.onclick=()=>{
@@ -267,8 +267,8 @@ function printLabels(){
       }
       img{width:24mm;height:24mm;}
       .txt{margin-left:3mm;}
-      .code{font-size:12pt;font-weight:bold;}
-      .cnt{font-size:8pt;}
+      .code{font-size:16pt;font-weight:bold;}
+      .cnt{font-size:14pt;}
     </style></head><body>${html}</body></html>
   `);
   w.print();
